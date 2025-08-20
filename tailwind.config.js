@@ -10,9 +10,10 @@ module.exports = {
       mono: ["Roboto Mono", "monospace"],
     },
     screen:{
-      'xxs':'540px',
+      'xs':'370px',
       'sm': '640px',
       'md':'768px',
+      
  },
     colors: {
       white: "#fff",

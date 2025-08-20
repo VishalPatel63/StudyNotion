@@ -306,8 +306,8 @@ export const deleteCourse = async (data, token) => {
 
 // get full details of a course
 export const getFullDetailsOfCourse = async (courseId, token) => {
-  const toastId = toast.loading("Loading...")
-  //   dispatch(setLoading(true));
+  // const toastId = toast.loading("Loading...")
+    // dispatch(setLoading(true));
   let result = null
   try {
     const response = await apiConnector(
@@ -331,7 +331,7 @@ export const getFullDetailsOfCourse = async (courseId, token) => {
     result = error.response.data
     // toast.error(error.response.data.message);
   }
-  toast.dismiss(toastId)
+  // toast.dismiss(toastId)
   //   dispatch(setLoading(false));
   return result
 }

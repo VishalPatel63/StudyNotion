@@ -17,10 +17,10 @@ export const CourseSlider = ({Courses}) => {
                         loop={true}
                         spaceBetween={20}
                         pagination={true}
-                        modules={[FreeMode,Pagination]}
-                       
+                        modules={[FreeMode,Pagination,Autoplay]}
+                         
                         autoplay={{
-                        delay: 1000,
+                        delay: 3000,
                         disableOnInteraction: false,
                         }}
                         navigation={true}

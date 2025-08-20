@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import { FiUploadCloud } from 'react-icons/fi';
 import { useSelector } from 'react-redux'
 
-import "video-react/dist/video-react.css"
+// import "video-react/dist/video-react.css"
 import { Player } from 'video-react';
 export const Upload = ({
     name,label,register,setValue,errors,
@@ -34,10 +34,10 @@ export const Upload = ({
     
     const {getRootProps,getInputProps,isDragActive} = useDropzone({
         accept: !video
-        ? {"image/*":[".jpg",".jpeg",".png"]}
+        ? {"image/*":[".jpg" ,".jpeg",".png"] }
         :{"video/*":[".mp4"]},
         onDrop,
-    })
+    });
     
     
     
@@ -126,4 +126,8 @@ export const Upload = ({
       )}
     </div>
   )
+
+
+
+
 }

@@ -220,7 +220,7 @@ export const EditProfile = () => {
                     >
                         Cancel
                     </button>
-                    <IconBnt type="submit " text="Save"  /> 
+                    <IconBnt type="submit " text="Save"  customClasses={'px-4  '}  /> 
                 </div>
             </div>
         </form>

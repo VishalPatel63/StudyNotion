@@ -61,7 +61,7 @@ export const ChangeProfilePicture = () => {
 
   return (
     <div className='flex items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 px-12  text-richblack-5 lg:p-8 md:p-8 p-2 lg:mr-0 md:mr-0 mr-2'>
-     <div className='flex items-center gap-x-2'>
+     <div className='flex items-center lg:gap-x-2 md:gap-x-2 gap-x-6'>
         <img src={previewSource || user?.image}  alt={`profile-${user?.firstName}`}
         className='aspect-square lg:w-[78px] md:w-[78px] w-[50px] rounded-full object-cover'/>
         <div className='space-y-2'>

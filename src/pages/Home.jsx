@@ -47,7 +47,7 @@ export const Home = () => {
      {/* __________________
      button */}
      <div className='flex flex-row gap-7 mt-8'>
-       <CTAButton active ={true} linkto={"/signup"}>
+       <CTAButton active ={true} linkto={"/signup"} >
         Learn More
        </CTAButton>
        <CTAButton active= {false} linkto={"/login"}>
@@ -210,7 +210,7 @@ export const Home = () => {
  {/* ________________________________________________ */}
         {/* section 3 */}
           <div className='hidden md:block'>
-
+          <div className='lg:w-full md:w-[800px]'>
         <div className=' w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-between
         gap-8 bg-richblack-900 text-white
         '>
@@ -220,12 +220,13 @@ export const Home = () => {
           <ReviewSlider/>
           
         </div>
+        </div>
           </div>
         <div className=' lg:hidden md:hidden w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-between
         gap-8 bg-richblack-900 text-white
         '>
       <IntsructorSection></IntsructorSection>
-         <h2 className='text-center text-4xl font-semibold mt-10'>Reviews from Other Learners</h2>
+         <h2 className='text-center lg:text-4xl md:text-3xl text-3xl font-semibold mt-10'>Reviews from Other Learners</h2>
          {/* reviewa slider here */}
           <ReviewSlider1/>
           

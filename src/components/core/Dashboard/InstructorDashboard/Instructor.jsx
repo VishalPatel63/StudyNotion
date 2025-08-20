@@ -38,7 +38,7 @@ export const Instructor = () => {
     const totalAmount = instructorData?.reduce((acc,curr) => acc+ curr.totalAmountGenerated,0);
     const totalStudents = instructorData?.reduce((acc,curr) => acc+ curr.totalStudentsEnrolled,0);
   return (
-    <div >
+    <div className='overflow-x-hidden' >
       <div className='space-y-2 lg:mt-0 md:mt-0 mt-10  '>
         <h1 className='text-2xl font-bold text-richblack-5'>
             Hi {user?.firstName}👋
@@ -107,7 +107,7 @@ export const Instructor = () => {
             </div>
             {/* <div className='flex justify-center'> */}
 
-            <div className="my-4 flex items-start space-x-6 ">
+            <div className="my-4 flex items-start lg:space-x-6 md:space-x-6 space-x-3 ">
               {courses.slice(0, 3).map((course) => (
                 <div key={course._id} className="w-1/3">
                   <img
@@ -116,17 +116,17 @@ export const Instructor = () => {
                     className="lg:h-[201px] md:h-[201px] h-[120px] w-full rounded-md object-cover"
                   />
                   <div className="mt-3 w-full">
-                    <p className="text-sm font-medium text-richblack-50">
+                    <p className="lg:text-sm md:text-sm text-[8px] font-medium text-richblack-50">
                       {course.courseName}
                     </p>
-                    <div className="mt-1 flex items-center space-x-2">
-                      <p className="text-xs font-medium text-richblack-300">
+                    <div className="mt-1 flex items-center lg:space-x-2 md:spaec-x-2 space-x-1">
+                      <p className="lg:text-sm md:text-sm text-[8px] font-medium text-richblack-300">
                         {course.studentsEnrolled.length} students
                       </p>
                       <p className="text-xs font-medium text-richblack-300">
                         |
                       </p>
-                      <p className="text-xs font-medium text-richblack-300">
+                      <p className="lg:text-sm md:text-sm text-[8px] font-medium text-richblack-300">
                         Rs. {course.price}
                       </p>
                     </div>

@@ -14,10 +14,6 @@ export const apiConnector = (method, url, bodyData, headers, params) => {
 
 
 
-const api = axios.create({
-    BASE_URL: 'http://localhost:4000/api',
-  });
-  
-  export default api;
+
         
         

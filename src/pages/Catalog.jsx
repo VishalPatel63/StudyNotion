@@ -60,13 +60,13 @@ export const Catalog = () => {
       <div className='box-content bg-richblack-800 px-4 flex justify-between lg:pl-40 md:pl-40 lg:gap-x-3 md:gap-x-5 gap-x-10  lg:pr-40 md:pr-40 '>
 
         <div className=' flex min-h-[260px] max-w-maxContentTab flex-col justify-center gap-4 lg:max-w-maxContent'>
-        <p className='text-sm text-richblack-300'>
+        <p className='lg:text-sm md:text-sm text-[10px] text-richblack-300'>
             {`Home / Catalog /`}
             <span className='text-yellow-25'>
              {catalogPageData?.data?.selectedCategory?.name}
             </span>
         </p>
-        <p className='text-3xl text-richblack-5'>
+        <p className='lg:text-3xl md:text-3xl text-2xl text-richblack-5'>
              {catalogPageData?.data?.selectedCategory?.name}
        </p>
         <p className='max-w-[870px] text-richblack-200'>
@@ -82,10 +82,10 @@ export const Catalog = () => {
       <div className='flex flex-col text-white mt-12'>
         <div>
 
-        <p className='text-lg font-semibold text-richblack-5'>Related resources</p>
+        <p className='lg:text-lg md:text-lg text-base font-semibold text-richblack-5'>Related resources</p>
         </div>
         <div>
-            <ul className='text-sm text-richblack-200 list-disc leading-8 tracking-widest'>
+            <ul className='lg:text-sm md:text-sm text-xs text-richblack-200 list-disc llg:eading-8 md:leading-7 leading-5 tracking-widest'>
                <Link to = {"https://cloud.google.com/document-ai/docs"}><li>Doc  {catalogPageData?.data?.selectedCategory?.name} </li> </Link> 
                 <li>Cheatsheets</li>
                 <li>Articles</li>
@@ -121,7 +121,7 @@ export const Catalog = () => {
                  </p>
             </div>
 
-            <div className='lg:py-8 md:py-8 py-4 items-center lg:ml-0 md:ml-0 ml-8'>
+            <div className='lg:py-8 md:py-8 py-4 items-center lg:ml-0 md:ml-0 ml-8 lg:mr-0 md:mr-0 mr-2'>
             <CourseSlider Courses = {catalogPageData?.data?.selectedCategory?.courses}/>
             </div>
          </div>
@@ -130,7 +130,7 @@ export const Catalog = () => {
            <div className='section_heading lg:ml-0 md:ml-0 ml-8'>
             Top Courses in {catalogPageData?.data?.differentCategory?.name}
              </div>
-             <div className='lg:py-8 md:py-8 py-4 items-center lg:ml-0 md:ml-0 ml-8'>
+             <div className='lg:py-8 md:py-8 py-4 items-center lg:ml-0 md:ml-0 ml-8 lg:mr-0 md:mr-0 mr-2'>
             <CourseSlider Courses = {catalogPageData?.data?.differentCategory?.courses}/>
             </div>
          </div>
@@ -139,7 +139,7 @@ export const Catalog = () => {
             <div className='section_heading lg:ml-0 md:ml-0 ml-8 '>
                 Frequently Bought Together
              </div>
-            <div className='lg:py-8 md:py-8 py-4 lg:ml-0 md:ml-0 ml-8'>
+            <div className='lg:py-8 md:py-8 py-4 lg:ml-0 md:ml-0 ml-8 lg:mr-0 md:mr-0 mr-2'>
               <div className='grid grid-cols-1 lg:gap-6 md:gap-6 gap-5 md:grid-cols-1  lg:grid-cols-2'>
               
               {

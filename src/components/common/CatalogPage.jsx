@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, matchPath, useLocation } from 'react-router-dom'
+import { Link, matchPath, useLocation , } from 'react-router-dom'
 import { apiConnector } from '../../services/apiconnector'
 import { categories } from '../../services/apis'
 
@@ -66,5 +66,8 @@ export const CatalogPage = () => {
                         <p className="text-center">No Courses Found</p>
                       )}
                     </div>
+    
+   
+    
   )
 }

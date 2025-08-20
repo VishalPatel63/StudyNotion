@@ -166,7 +166,7 @@ const handleLectureCompletion = async() => {
 return (
     
   
-  <div className='flex flex-col gap-5 text-white mt-8 shadow-[8px_8px_rgba(270,255,255)'>
+  <div className='flex flex-col gap-5 text-white mt-4 ml-2 shadow-[8px_8px_rgba(270,255,255)'>
     {
       !videoData ? (
         <img

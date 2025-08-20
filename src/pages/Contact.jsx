@@ -7,7 +7,7 @@ import { ReviewSlider } from '../components/common/ReviewSlider';
 import { ReviewSlider1 } from '../components/common/ReviewSlider1';
 export const Contact = () => {
   return (
-    
+     
      <div>
       <div className='mx-auto mt-20 flex  w-11/12 max-w-maxContentTab lg:max-w-maxContent justify-between gap-10 text-white lg:flex-row flex-col'>
           {/* contact Details */}
@@ -22,7 +22,7 @@ export const Contact = () => {
         </div>
 
         <div className='relative mx-auto my-20 flex flex-col w-11/12 max-w-maxContent items-center justify-between gap-8 bg-richblack-900 text-white'>
-          <h1 className='text-center text-4xl font-semibold mt-8'>
+          <h1 className='text-center lg:text-4xl md:text-3xl text-3xl font-semibold mt-8'>
           Reviews from other learners
           </h1>
          {/* reviewa slider here */}

@@ -6,6 +6,7 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { BsChevronDown } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { IconBnt } from './IconBnt';
+import { MdOutlineArrowBackIos } from 'react-icons/md';
 
 export const VideoModal = ({setReviewModal,setModal}) => {
     const [activeStatus,setActiveStatus] =  useState("");
@@ -94,7 +95,7 @@ export const VideoModal = ({setReviewModal,setModal}) => {
                   </span> */}
                   <span
                     className={`${
-                      activeStatus === course?.sectionName
+                      activeStatus === (course?.sectionName)
                         ? "rotate-180"
                         : "rotate-0"
                     } transition-all duration-500`}
@@ -136,13 +137,13 @@ export const VideoModal = ({setReviewModal,setModal}) => {
             </div>
           ))}
         </div>
-        <div className=' flex justify-center'>
-
-       <IconBnt
+        <div className=' flex justify-center '>
+       <IconBnt  
        onclick={()=> setModal(false)}
-         text={"Cancel"}
-         customClasses= "mt-6 h-10 w-20 text-sm "
+       text={">"}
+       customClasses='mt-6 h-10 w-20 text-sm   px-4 '
        />
+    
         </div>
       
       </div>

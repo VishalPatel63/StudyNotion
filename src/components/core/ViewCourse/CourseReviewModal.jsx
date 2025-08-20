@@ -111,7 +111,7 @@ export const CourseReviewModal = ({setReviewModal}) => {
                   >
                    Cancel
                   </button>
-                  <IconBnt text = "Save" />
+                  <IconBnt text = "Save" customClasses={'px-5'} />
                 </div>
               </form>
             </div> 

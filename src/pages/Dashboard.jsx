@@ -18,13 +18,17 @@ export const Dashboard = () => {
      
 
     <Sidebar></Sidebar>
-     <div className='    h-[calc(100vh-3.rem)] lg:flex-1 md:flex-1 flex '>
+     {/* <div className='    h-[calc(100vh-3.rem)] lg:flex-1 md:flex-1 flex '>
           <div className='lg:mx-auto lg:w-11/12 md:w-11/12 w-[382px] lg:max-w-[1000px] md:max-w-[1000px] max-w-[1200px]   lg:py-10 md:py-10 -p-20  '>
             <Outlet></Outlet>
 
           </div>
-     </div>
-     
+     </div> */}
+           <div className="  h-[calc(100vh-3.5rem)] flex-1 overflow-auto">
+        <div className="mx-auto w-11/12 max-w-[1000px] py-10">
+          <Outlet />
+        </div>
+      </div>
     </div>
   )
 }

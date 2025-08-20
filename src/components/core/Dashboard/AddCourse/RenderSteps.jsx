@@ -23,7 +23,7 @@ export default function RenderSteps () {
     ]
   return (
    <>
-        <div className='relative mb-2 flex w-full lg:justify-center md:justify-center justify-start  lg:ml-0 md:ml-0 ml-3  '>
+        <div className='lg:relative mb-2 flex w-full lg:justify-center md:justify-center justify-start  lg:ml-0 md:ml-0 ml-3 lg:mr-0 md:mr-0 mr-10  '>
             {
                 steps.map((item,index) =>(
                     <>
@@ -31,7 +31,7 @@ export default function RenderSteps () {
                     className='flex flex-col items-center'
                     >
                          <button
-                         className={`grid cursor-pointer aspect-square w-[34px] place-items-center lg:gap-8 md:gap-8 gap-4 rounded-full border-[1px] 
+                         className={`grid cursor-pointer aspect-square lg:w-[34px] md:w-[34px] w-[25px] place-items-center lg:gap-8 md:gap-8 gap-4 rounded-full border-[1px] 
                             ${step === item.id
                                 ? "border-yellow-50 bg-yellow-900 text-yellow-50"
                                 :"border-richblack-700 bg-richblack-800 text-richblack-300"
@@ -69,9 +69,9 @@ export default function RenderSteps () {
                     return (
                         <>
                         <div key={item.id}
-                        className='flex min-w-[130px] flex-col items-center gap-y-2'
+                        className='flex lg:min-w-[130px] md:min-w-[120px] min-w-[110px] flex-col items-center gap-y-2'
                         >
-                            <p className= {`text-sm ${step >= item.id ? "text-richblack-5":"text-richblack-500"}`}>
+                            <p className= {`lg:text-sm md:text-sm text-[11px] ${step >= item.id ? "text-richblack-5":"text-richblack-500"}`}>
                                 {item.title}
                             </p>
                         </div>
@@ -81,9 +81,12 @@ export default function RenderSteps () {
                 })
             }
         </div>
+        <div className=' '>
+
         {step === 1 && <CourseInformationForm />}
          {step === 2 && <CourseBuilderForm/>}
         {step === 3 && <PublishCourse/>} 
+        </div>
     </>
   )
 }

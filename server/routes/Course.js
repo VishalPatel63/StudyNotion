@@ -38,9 +38,7 @@ const {
 } = require("../controllers/Subsection")
 
 
-const {
-  contactUsController
-} = require("../controllers/ContactUs")
+
 // Rating Controllers Import
 const {
   createRating,
@@ -93,7 +91,7 @@ router.post("/updateCourseProgress",auth,isStudent,updateCourseProgress);
 router.post("/createCategory", auth, isAdmin, createCategory)
 router.get("/showAllCategories", showAllCategories)
 router.post("/getCategoryPageDetails", categoryPageDetails)
-router.post("/contact",  contactUsController)
+
 
 // ********************************************************************************************************
 //                                      Rating and Review

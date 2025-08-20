@@ -98,7 +98,8 @@ export const CoursesTable = ({courses,setCourses}) => {
                            </div>
                             </Td>
                             <Td className='text-sm font-semibold text-richblack-100'>
-                                2hr 30min
+                                {/* 2hr 30min */}
+                                {course?.totalDuration}
                             </Td>
                             <Td className='text-sm font-semibold text-richblack-100'>
                                 ${course.price}

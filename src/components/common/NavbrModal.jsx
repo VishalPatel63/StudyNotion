@@ -49,8 +49,8 @@ export const NavbrModal = ({ setConfirmationModalNav }) => {
 
         <div>
             {/* <button onClick={() => setConfirmationModalNav(false)}> */}
-                <div className='fixed lg:hidden md:hidden inset-0 z-[100]  grid place-items-start  justify-items-end mt-14 overflow-auto transition- duration-1000   '>
-                    <div className='w-5/12 h-80 max-w-[350px] rounded-lg border-richblack-400 bg-richblack-800  bg-opacity-95 p-6 transition-transform  duration-1000'>
+                <div className='fixed lg:hidden md:hidden inset-0 z-[100] overflow-y-hidden  grid place-items-start  justify-items-end mt-14 overflow-auto transition- duration-1000   '>
+                    <div className='w-5/12  h-screen max-w-[350px]  border-richblack-400 bg-richblack-900   bg-opacity-95 p-5 transition-transform  duration-1000'>
                     <div>
                         
                     <button
@@ -60,24 +60,28 @@ export const NavbrModal = ({ setConfirmationModalNav }) => {
                 <RxCross2 size={30} />
                 </button>
                     </div>
-                    <hr className='text-white opacity-20 mb-5' />
+                    <hr className='text-white opacity-50 mb-5' />
                         <div className="flex flex-col w-11/12 max-w-maxContent items-center justify-between">
                        
 
                             {/* Navigation links */}
                             <nav className=" flex ">
-                                <ul className=" flex flex-col  gap-y-10 text-richblack-25 font-semibold">
+                                <ul className=" flex flex-col  gap-y-7 text-richblack-25 font-semibold">
                                     {NavbarLinks.map((link, index) => (
                                         <li key={index}>
+                                            
                                             {link.title === "Catalog" ? (
                                                 <>
                                                     <div
-                                                        className={`  lg:group md:group group relative flex  cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName")
+                                                        className={`   group relative flex  cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName")
                                                             ? "text-yellow-25"
                                                             : "text-richblack-25"
                                                             }`}
                                                     >
+                                                        <div>
+
                                                         <p>{link.title}</p>
+                                                        </div>
 
                                                         <BsChevronDown />
                                                         <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex   translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px] md:w-[250px] w-[150px]">

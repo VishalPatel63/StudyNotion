@@ -99,7 +99,7 @@ export const UpdatePassword = () => {
       >
         Cancel
       </button>
-      <IconBnt type="submit" text="Update" />
+      <IconBnt type="submit" text="Update" customClasses={'px-4'} />
     </div>
   </form>
 

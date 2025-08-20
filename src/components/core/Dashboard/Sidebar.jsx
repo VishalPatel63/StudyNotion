@@ -39,7 +39,20 @@ export const Sidebar = () => {
         )
     }
   return (
-    <div>  
+    <div className='relative'>  
+
+<div className='h-4 w-2 ' >
+
+<button className={`   ml-1 md:hidden lg:hidden  w-4   `}
+       
+
+  onClick={() => setConfirmationModall(true)}
+  
+>         
+
+<AiOutlineMenu fontSize={30} fill="#AFB2BF"    />
+         </button>
+  </div>
         <div className=' hidden md:block  flex-col border-r-[1px] border-r-richblack-700
          lg:h-[calc(100vh-3.5rem)]  bg-richblack-800 py-10 md:mr-2'>
 
@@ -93,31 +106,7 @@ export const Sidebar = () => {
 
    {/* Instructor */}
 
-   <div className='h-4 w-4 ' >
 
-          <button className={`   mr-4 md:hidden lg:hidden h-4 w-4   `}
-//                   onClick={() => setConfirmationModalInstr({
-//                   btn3Text:"My Profile",
-//                   btn4Text:"Dashboard",
-//                   btn5Text:"My Courses",
-//                   btn6Text:"Add Course",
-//                   btn7Text: "Cancel",
-
-//                  btn3Handler:()=> dispatch(navigate("/dashboard/my-profile") ? (setConfirmationModalInstr(true)):(setConfirmationModalInstr(false))) ,
-//                  btn4Handler:()=> dispatch(navigate("/dashboard/instructor")? (setConfirmationModalInstr(true)):(setConfirmationModalInstr(false))),
-//                  btn5Handler:()=> dispatch(navigate("/dashboard/my-courses")? (setConfirmationModalInstr(true)):(setConfirmationModalInstr(false))),
-//                  btn6Handler:()=> dispatch(navigate("/dashboard/add-course")? (setConfirmationModalInstr(true)):(setConfirmationModalInstr(false))),
-//                  btn7Handler:()=> setConfirmationModalInstr(false),
-// }
-
-// )}
-
-   onClick={() => setThevalue(value)}
-   
->
-            <AiOutlineMenu fontSize={25} fill="#AFB2BF"   />
-          </button>
-   </div>
 
            
     </div>

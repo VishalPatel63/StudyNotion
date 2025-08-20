@@ -156,9 +156,11 @@ const {
   }
 
   return (
+   
+
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-8 rounded-md border-[1px] border-richblack-700 bg-richblack-800 lg:p-6 md:p-6 p-2 lg:mr-0 md:mr-0 mr-2"
+      className="space-y-8 rounded-md border-[1px] border-richblack-700 bg-richblack-800 lg:p-6 md:p-6 p-2 lg:mr-0 md:mr-0 mr-1  "
     >
       {/* Course Title */}
       <div className="flex flex-col space-y-2">
@@ -315,6 +317,7 @@ const {
         </IconBnt>
       </div>
     </form>
+   
   )
   
 }

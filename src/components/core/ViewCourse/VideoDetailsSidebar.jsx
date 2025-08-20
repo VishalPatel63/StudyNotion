@@ -62,21 +62,20 @@ export const VideoDetailsSidebar = ({setReviewModal}) => {
 
   return (
       <>
-      <div className=''>
+      <div className='relative'>
+      <div className='h-4 w-2 '>
 
      <button
-      className='lg:hidden md:hidden '
+      className='lg:hidden md:hidden ml-1 w-4 '
        onClick={() => setThvale(value)
 
          
           }
       >
-         <AiOutlineMenu fontSize={24} fill="#AFB2BF"/>
+         <AiOutlineMenu fontSize={30} fill="#AFB2BF"/>
       </button> 
       {modal && <VideoModal setModal={setModal}  setReviewModal={setReviewModal} ></VideoModal>}
       </div>
-     
-     
 
 <div className='hidden md:block'>
 <div className="  flex h-[calc(100vh-3.5rem)] lg:w-[320px] md:w-[280px] max-w-[350px] flex-col border-r-[1px] border-r-richblack-700 bg-richblack-800">
@@ -169,6 +168,10 @@ export const VideoDetailsSidebar = ({setReviewModal}) => {
 
      
      </div>
+      </div>
+     
+     
+
       </>
   )
 }

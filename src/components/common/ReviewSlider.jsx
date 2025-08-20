@@ -51,8 +51,8 @@ export const ReviewSlider = () => {
           {reviews.map((review, i) => {
             return (
               <SwiperSlide key={i}>
-                <div className=" flex flex-col gap-3 bg-richblack-800 p-4 text-[14px] text-richblack-25 lg:h-[192px] md:h-[192px] lg:w-[300px] md:w-[300px] h-[192px] w-[300px] " >
-                  <div className="flex items-center gap-4">
+                <div className=" flex flex-col gap-3 bg-richblack-800 p-4 text-[14px] text-richblack-25 lg:h-[192px] md:h-[192px] lg:w-[300px] md:w-[300px] h-[192px] w-[300px]  rounded-xl" >
+                  <div className="flex items-center gap-4 ">
                     <img
                       src={
                         review?.user?.image

@@ -19,7 +19,7 @@ import { addToCart } from '../slices/cartSlice';
 import toast from 'react-hot-toast';
 import { ACCOUNT_TYPE } from '../utils/constants';
 
-export const CourseDetails = ({course}) => {
+export const CourseDetails = () => {
 
 
     const { user } = useSelector((state) => state.profile);
@@ -96,16 +96,7 @@ export const CourseDetails = ({course}) => {
     }
 
 
-    const handleAddToCart = () =>{
-        if(user && user?.accountType === ACCOUNT_TYPE.INSTRUCTOR){
-          toast.error("You are an Instructor,you can not Buy a Course");
-          return;
-        }
-        if(token){
-          dispatch(addToCart(course._id))
-          return;
-        }
-    }
+
 
         
     if (paymentLoading) {
@@ -133,7 +124,7 @@ export const CourseDetails = ({course}) => {
         )
     }
     const {
-        _id: course_id,
+        _id: courseid,
         courseName,
         courseDescription,
         thumbnail,
@@ -144,14 +135,36 @@ export const CourseDetails = ({course}) => {
         instructor,
         studentsEnrolled,
         createdAt,
-    } = courseData.data?.courseDetails;
+    } = courseData?.data?.courseDetails;
 
+
+    const handleAddToCart = () =>{
+        if(user && user?.accountType === ACCOUNT_TYPE.INSTRUCTOR){
+          toast.error("You are an Instructor,you can not Buy a Course");
+          return;
+        }
+        if(token){
+          dispatch(addToCart( courseData?.data?.courseDetails))
+          return;
+        }
+        setConfirmationModal({
+          text1:"You are not logged in",
+          text2: "Please login to add to cart",
+          btn1Text:"login",
+          btn2Text:"cancel",
+          btn1Handler: () =>navigate("/login"),
+          btn2Handler: ()=> setConfirmationModal(null),
+        })
+      }
+
+
+    
 
     return (
         <>
             <div className='relative w-full bg-richblack-800' >
                 {/* hero section */}
-                <div className='mx-auto box-content px-4 lg:w-[1260px] 2xl:relative'>
+                <div className='mx-auto box-content px-4 lg:w-[1260px]  2xl:relative'>
                     <div className='mx-auto grid min-h-[450px] max-w-maxContentTab justify-items-start py-8 lg:mx-0 lg:justify-items-start lg:py-0 xl:max-w-[810px]'>
                         <div className='relative block max-h-[30rem] mb-10 lg:hidden'>
                         <div className="absolute bottom-0 left-0 h-full w-full shadow-[#161D29_0px_-64px_36px_-28px_inset]"></div>
@@ -171,7 +184,7 @@ export const CourseDetails = ({course}) => {
                         >
 
                             <div>
-                                <p className="text-4xl font-bold text-richblack-5 sm:text-[42px]">
+                                <p className="lg:text-4xl md:text-3xl text-2xl font-bold text-richblack-5 sm:text-[42px]">
                                     {courseName}
                                 </p>
                             </div>
@@ -210,12 +223,35 @@ export const CourseDetails = ({course}) => {
                             <p className="space-x-3 pb-4 text-3xl font-semibold text-richblack-5">
                                 Rs. {price}
                             </p>
-                            <button className="yellowButton" onClick={handleBuyCourse}>
-                                Buy Now
-                            </button>
-                            <button className="blackButtonb"
-                            onClick={()=> handleAddToCart}
-                            >Add to Cart</button>
+
+
+
+               <div className='flex flex-col gap-4'>
+                 <button
+                 className='yellowButton'
+                    onClick={
+                        user && courseData?.data?.courseDetails?.studentsEnrolled.includes(user?._id)
+                        ? ()=> navigate("/dashboard/enrolled-courses")
+                        : handleBuyCourse
+                    }
+                >
+                    {
+                        user && courseData?.data?.courseDetails?.studentsEnrolled.includes(user?._id) ? "Go To Course ": "Buy Now"
+                    }
+                </button>
+
+                {
+                    (!user || !courseData?.data?.courseDetails?.studentsEnrolled.includes(user?._id)) && (
+                        <button onClick={handleAddToCart}  
+                        className='blackButtonb'>
+                            Add to Cart
+                        </button>
+                    )
+                }
+            </div>
+
+
+
                         </div>
                       
                     </div>
