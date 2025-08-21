@@ -36,10 +36,11 @@ export const sidebarLinks = [
   },
   {
     id: 6,
-    name: "Add to cart",
+    name: "your cart",
     path: "/dashboard/cart",
     type: ACCOUNT_TYPE.STUDENT,
     icon: "VscHistory",
   },
 ];
+
 
