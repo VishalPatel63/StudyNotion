@@ -16,6 +16,7 @@ export const ConfirmationModal = ({modalData}) => {
                 text={modalData?.btn1Text}
                 ></IconBnt>
                 <button 
+                  
                  className='cursor-pointer rounded-md bg-richblack-200 lg:py-[8px] lg:px-[20px] md:py-[8px] md:px-[20px] py-[6px] px-[15px] font-semibold text-richblack-900'
                 onClick={modalData?.btn2Handler}>
                   {modalData?.btn2Text}
@@ -25,3 +26,4 @@ export const ConfirmationModal = ({modalData}) => {
     </div>
   )
 }
+
